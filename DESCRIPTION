@@ -35,7 +35,7 @@ Imports:
     stringr,
     tidyr,
     utils
-Remotes: bioc::release/impute
+Remotes: bioc::impute
 VignetteBuilder: knitr
 Depends:
     R (>= 2.10)
