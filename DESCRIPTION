@@ -35,7 +35,8 @@ Imports:
     stringr,
     tidyr,
     utils
-Remotes: bioc::impute
+Remotes: bioc::impute,
+    cmdstanr=github::stan-dev/cmdstanr
 VignetteBuilder: knitr
 Depends:
     R (>= 2.10)
