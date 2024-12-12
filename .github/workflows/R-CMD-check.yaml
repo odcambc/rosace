@@ -42,12 +42,12 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rcmdcheck | stan-dev/cmdstanr
-          needs: check
+          extra-packages: any::rcmdcheck, local::.
 
-      - name: Check cmdstanr toolchain
+      - name: Install cmdstan
         run: |
           cmdstanr::check_cmdstan_toolchain(fix = TRUE)
+          cmdstanr::install_cmdstan(cores = 2)
         shell: Rscript {0}
 
       - uses: r-lib/actions/check-r-package@v2
